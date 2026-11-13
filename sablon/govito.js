@@ -4,7 +4,7 @@ const G = '#3BE08C', BG = '#050B08', MUT = '#8FA89A';
 // Logo: kullanıcının "go" logosu gvlogo.png olarak repoda varsa onu kullan; yoksa sadece yazı.
 const fs = require('fs'), path = require('path');
 const LOGOF = path.join(__dirname, 'gvlogo.png');
-const WORD = (s = 44) => `<span style="display:inline-flex;align-items:center;gap:${Math.round(s * .28)}px">${fs.existsSync(LOGOF) ? `<img src="file://${LOGOF}" style="width:${Math.round(s * 1.3)}px;height:${Math.round(s * 1.3)}px;border-radius:50%;object-fit:cover">` : ''}<span style="font-size:${s}px;font-weight:800;letter-spacing:-1px;color:#fff">Go<span style="color:${G}">Vito</span></span></span>`;
+const WORD = (s = 44) => fs.existsSync(LOGOF) ? `<img src="file://${LOGOF}" style="height:${Math.round(s * 1.25)}px;width:auto;display:block">` : `<span style="font-size:${s}px;font-weight:800;letter-spacing:-1px;color:#fff">Go<span style="color:${G}">Vito</span></span>`;
 const OK = `<svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="12" r="11" fill="${G}"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#04130B" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const CARD = (inner, extra = '') => `<div style="background:#0E1913;border:1.5px solid #1F3329;border-radius:26px;padding:26px 30px;${extra}">${inner}</div>`;
 const VANBOX = (w, x, y) => `<div style="position:absolute;left:${x}px;top:${y}px;width:${w}px"><div style="position:absolute;left:6%;right:6%;bottom:-14px;height:46px;background:radial-gradient(ellipse,rgba(0,0,0,.8),transparent 70%)"></div>${VAN()}</div>`;
