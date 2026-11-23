@@ -36,7 +36,7 @@ function post(o) { // o.style: 'A' | 'B'; o.kicker, o.h1a, o.h1b, o.from, o.to, 
 function vip(o) { // o.kicker, o.h1a, o.h1b, o.cards [[başlık, alt]...]
   return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>${FONTS}*{margin:0;box-sizing:border-box}</style></head><body>
 <div style="width:1080px;height:1350px;position:relative;overflow:hidden;font-family:'Plus Jakarta Sans';background:radial-gradient(ellipse at 60% 62%,#2FA36A 0,transparent 50%),linear-gradient(165deg,#1C7A4B,#09391F)">
- <div style="position:relative;padding:64px 70px 0;display:flex;justify-content:space-between;align-items:center">${LOGO(true)}<span style="font-size:22px;font-weight:700;color:#fff;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:10px 22px">VIP Vito Transfer</span></div>
+ <div style="position:relative;padding:64px 70px 0;display:flex;justify-content:space-between;align-items:center">${LOGO(true)}<span style="font-size:22px;font-weight:700;color:#fff;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:10px 22px">VIP Transfer</span></div>
  <div style="position:relative;padding:56px 70px 0"><div style="font-size:24px;font-weight:800;letter-spacing:5px;color:${LG}">${o.kicker}</div>
   <div style="font-size:92px;font-weight:800;letter-spacing:-4px;line-height:1;color:#fff;margin-top:18px">${o.h1a}<br><span style="color:${LG}">${o.h1b}</span></div></div>
  <div style="position:absolute;left:70px;right:30px;top:560px"><div style="position:absolute;left:8%;right:8%;bottom:-20px;height:60px;background:radial-gradient(ellipse,rgba(0,0,0,.55),transparent 70%)"></div>${VAN()}</div>
